@@ -5,7 +5,7 @@ _Disclaimer: I am not affiliated with Box. This is an unofficial patch! Use at y
 
 Box Drive seems to be incompatible with macOS 11 Big Sur beta, and Box does not seem to want to early-release a patch.
 
-This leaves folks who rely on Box Drive for personal or work use with a choice to either patch it themselves or 2+ months for an official patch. 
+This leaves folks who rely on Box Drive for personal or work use with a choice to either patch it themselves or wait 2+ months for an official patch. 
 
 I decided to patch it myself since it was developed in Python (frozen with py2app) and easy to decompile from bytecode.
 
