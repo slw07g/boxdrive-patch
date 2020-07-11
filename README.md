@@ -32,13 +32,13 @@ Now, with python37.zip in place and the kext loaded, you should be able to smoot
 
 
 ## Thanks
-uncompyle6
+uncompyle6 <br />
 py2app (bundled app documentation)
 
 
 ## FAQ
 1. Will this fix survive a reboot?
 
-The python37.zip will survive the reboot, but the Kernel extension may have to be manually loaded after each reboot. To load kext, You could just repeat the short method again, since the script tries to load the kernel extension for you.
+The python37.zip will survive the reboot, but the Kernel extension may have to be manually loaded after each reboot. To load the kext, You could just repeat the short method again, since the box-patch.sh script tries to load the kernel extension for you.
 
 Alternatively, if you try to Launch box and encounter an error regarding the Box Kernel Extension not being loaded, reference the notes in the "Detailed" section above which talks about loadinbg the Kernel extension.
