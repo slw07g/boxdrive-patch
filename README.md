@@ -20,9 +20,10 @@ I decided to patch it myself since it was developed in Python (frozen with py2ap
 ## Patching Box Drive (Detailed)
 So, In this repo you will find python37.zip - you will need to replace /Applications/Box.app/Contents/Resources/lib/python37.zip with python37.zip from this repo.
 
-Most of the compiled modules are unchanged in the zip, I had modify a few because Box attempts to load CoreFoundation, CoreServices, and SystemConfiguration dylibs without specifying the complete file path. Additionally, now that macOS 11 Big Sur has moved shared libraries from the file system to a shared cache, ctypes find_library() calls fail.
+Most of the compiled modules are unchanged in the zip, I had to modify a few because Box attempts to load CoreFoundation, CoreServices, and SystemConfiguration dylibs without specifying the complete file path. Additionally, now that macOS 11 Big Sur has moved shared libraries from the file system to a shared cache, ctypes find_library() calls fail.
 
-Additionally, you might also have to manually load the Box FUSE kernel extension. This is only necessary if you try to launch Box and it complains that kernel extension hasn't loaded.
+Additionally, you might also have to manually load the Box FUSE kernel extension. This is only necessary if you try to launch Box and it complains that kernel extension hasn't loaded. The command to load the kernel extension is:
+
 `sudo kextload /System/Volumes/Data/Library/Filesystems/box.fs/Contents/Extensions/10.11/osxfuse.kext`
 
 If you see an error that the start/stop routine failed, you may be able to ignore it. Run the command `kextstat | grep box` and if you see `com.box.filesystems.osxfuse (303.10.2)` in the list, that means it's loaded and you're good to go.
