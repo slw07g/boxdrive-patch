@@ -14,7 +14,7 @@ I decided to patch it myself since it was developed in Python (frozen with py2ap
  1. Clone this repository, 
  2. In a terminal, navigate to the repository's directory.
  3. Run the command `zsh box-patch.sh` _You may be prompted for your macOS user password because root privileges are needed to copy the python37.zip file into the Box app subfolders, as well as to ensure the box FUSE kext is loaded._
- 4. If all goes will you should be able to launch Box with no issues. 
+ 4. If all goes well you should be able to launch Box with no issues. 
 
 
 ## Patching Box Drive (Detailed)
